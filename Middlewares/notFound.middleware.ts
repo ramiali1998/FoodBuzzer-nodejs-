@@ -7,7 +7,7 @@ const { errRes } = require("../tools/checkResponseState");
  * @param {*} next
  * @returns
  */
-module.exports = (req, res, next) => {
-    return errRes(res, "Not Found", 404);
-};
-x
+
+export default (req, res, next) => {
+    return errRes(res, `Not Found`, 404);
+  };
