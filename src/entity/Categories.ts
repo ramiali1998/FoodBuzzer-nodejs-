@@ -11,7 +11,6 @@ export class Categories extends BaseEntity{
     categoryName: string;
     
     @OneToMany(type => Menu, menu => menu.categoriesID,{cascade:true})
-  
     item: Menu[];
     
         //CategoriesID O Realtion with M Menu Table//

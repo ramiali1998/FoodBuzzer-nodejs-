@@ -1,14 +1,18 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity} from "typeorm"; 
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, ManyToOne} from "typeorm"; 
+import { Customers } from "./Customers";
 
 @Entity()
-export class Order extends BaseEntity{
+export class OrderItem extends BaseEntity{
 
     @PrimaryGeneratedColumn()
     orderId: number;
     @Column()
-    orderDate: Date;
+    name: String;
     @Column()
-    orderStatus: String;
+    price: String;
+    @Column()
+    amount:number;
 
-        // Order Realtion with Customers Table//
-}
+    @ManyToOne(OrderItem => Customers, customers => customers.orderItem)
+    customer: Customers;
+ }
