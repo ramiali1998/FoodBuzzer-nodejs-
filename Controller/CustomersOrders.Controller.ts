@@ -4,7 +4,7 @@ import { print } from "util";
 import { Categories } from "../src/entity/Categories";
 import { Menu } from "../src/entity/Menu";
 import { errRes, okRes } from "../tools/checkResponseState";
-export default class MenuController
+export default class CoustermsOrderController
 {
 /**
    *

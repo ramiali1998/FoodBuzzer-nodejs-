@@ -6,20 +6,11 @@ export class Menu extends BaseEntity{
 
     @PrimaryGeneratedColumn()
     foodId: number;
-
-
     @Column()
     foodName: string;
-
-
     @Column()
     foodPrice: string;
-
- 
-
-
     @ManyToOne(type => Categories, categories => categories.item)
-  
     categoriesID: Categories;
         // Menu Realtion with CategoriesID Table//
 }
