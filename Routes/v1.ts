@@ -1,11 +1,10 @@
 import * as express from "express";
-import MenuController from "../Controller/menu.controller"
+import CategoriesController from "../Controller/Categories.controller"
+import MenuController from "../Controller/menu.controller";
 
 const route = express.Router();
 
+  
+route.get('/menu',CategoriesController.getAll);
  
-
-
-route.get('/menu',MenuController.getAll);
-
 export default route;

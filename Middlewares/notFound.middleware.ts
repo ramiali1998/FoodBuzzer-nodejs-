@@ -9,5 +9,5 @@ const { errRes } = require("../tools/checkResponseState");
  */
 
 export default (req, res, next) => {
-    return errRes(res, `Not Found`, 404);
+    return errRes(res, `Not Found MM `, 404);
   };
