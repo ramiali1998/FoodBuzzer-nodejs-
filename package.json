@@ -31,8 +31,19 @@
         "start": "ts-node src/index.ts",
         "server": "nodemon src/index.ts"
     },
+    "engines": {
+        "node": "v14.17.0"
+    },
     "main": "index.js",
     "keywords": [],
     "author": "",
-    "license": "ISC"
+    "license": "ISC",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ramiali1998/FoodBuzzer-nodejs-.git"
+    },
+    "bugs": {
+        "url": "https://github.com/ramiali1998/FoodBuzzer-nodejs-/issues"
+    },
+    "homepage": "https://github.com/ramiali1998/FoodBuzzer-nodejs-#readme"
 }

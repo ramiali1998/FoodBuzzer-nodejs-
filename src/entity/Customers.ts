@@ -1,4 +1,4 @@
-import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, Timestamp, OneToMany} from "typeorm"; 
+import {Entity, PrimaryGeneratedColumn, Column, BaseEntity, Timestamp, OneToMany, CreateDateColumn} from "typeorm"; 
 import { OrderItem } from "./Order";
 
 @Entity()
@@ -7,14 +7,16 @@ export class Customers extends BaseEntity{
     @PrimaryGeneratedColumn()
     CustomerId: number;
     @Column()
+    CustomerName: String;  
+    @Column()
     phone: string;
     @Column()
     total_cost: string;
-    @Column()
+    @Column({default:false})
     notified: boolean;
-    @Column()
-    CreatedAt:Timestamp;
-    //CategoriesID O Realtion with M Menu Table//
+    @CreateDateColumn()
+    CreatedAt:Date;
+ 
     @OneToMany(type => OrderItem, orderItem => orderItem.customer,{cascade:true})
     orderItem: OrderItem[];
 
